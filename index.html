@@ -1,202 +1,374 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smile</title>
 
-  
-  <title>懒人的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="First Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="懒人的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="懒人的博客">
-<meta property="og:description" content="First Blog">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="wangjie">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="懒人的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="css/editormd.min.css" th:href="@{css/editormd.min.css}">
+    <link rel="stylesheet" href="css/me.css" th:href="@{css/me.css}">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
-
+</head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">懒人的博客</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">jack&#39;s blog</a>
-        </h2>
-      
+
+<!--导航-->
+<nav id="nav" class="gird-header" style="display: none">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui olive header item" style="font-family: STSong">Smile</h2>
+                <a href="index.html" class="active m-item item"><i class="home icon"></i>Home</a>
+                <a href="types.html" class="m-item item"><i class="clone outline icon"></i>Type</a>
+                <a href="archives.html" class="m-item item"><i class="clock icon"></i>Time</a>
+                <a href="music.html" class="m-item item"><i class="music icon"></i>Music</a>
+                <a href="picture.html" class="olive m-item item"><i class="image icon"></i>Photo</a>
+                <a href="about.html" class="m-item item"><i class="info icon"></i>About me</a>
+            <div class="right m-item item">
+                <form name="search" action="#" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
+                        <input style="color: white" type="text" name="query" placeholder="Search....">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/10/hello-world/" class="article-date">
-  <time datetime="2020-01-10T02:36:48.428Z" itemprop="datePublished">2020-01-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/10/hello-world/" data-id="ck57xr49n0000d4ttgc0ygtva" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/01/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 wangjie<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-hide" style="display: none">
+        <i class="sidebar icon"></i>
+    </a>
 </nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+<!--顶部图片-->
+<div class="m-bg-class_outer" style="width: 100%;height: 750px">
+    <img src="css/images/waller1.jpg" th:src="@{css/images/waller1.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <div class="m-bg-class_cover" align="center">
+        <div class="m-margin-top-maxx" align="center">
+            <img class="ui circular image" align="center" src="css/images/me.png" th:src="@{css/images/me.png}" style="width: 150px;height: 150px;">
+        </div>
+        <div class="m-font-size-title-large" align="center">Smile 个人博客</div>
+
+        <div class="" align="center">
+            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+            <a href="#" class="ui qq circular icon button" data-content="316392836" data-position="bottom center"><i class="qq icon"></i></a>
+            <a href="#" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>
+            
+            <a href="#" class="ui email circular icon button" data-content="1435469178@qq.com" data-position="bottom center"><i class="envelope  icon"></i></a>
+        </div>
+
+        <div class="ui wechat-qr flowing popup transition hidden">
+            <img src="css/images/oneStarWechat.jpg" th:src="@{css/images/oneStarWechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">微信</div>
+        </div>
+        <div class="ui qq-qr flowing popup transition hidden">
+            <img src="css/images/qq.jpg" th:src="@{css/images/qq.jpg}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">QQ</div>
+        </div>
+
+        <h3 class="m-font-size-text" align="center"> Stay hungry,Stay foolish</h3>
+        <hr style="width: 50%">
+        <h5 class="m-font-size-text-init-title m-margin-top-large">不要等待机会，而要创造机会</h5>
+        <h5 class="m-font-size-text-init-title">没有天生的信心，只有不断培养的信心</h5>
+        <h5 class="m-font-size-text-init-title">昨晚多几分钟的准备，今天少几小时的麻烦 </h5>
+        <h5 class="m-font-size-text-init-title">让我们将事前的忧虑，换为事前的思考和计划吧！</h5>
+        <div id="waypoint" class="ui m-margin-top-large" align="center">
+            <a href="index.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>Home</a>
+            <a href="types.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==2} ? 'active'"><i class="clone outline icon"></i>Type</a>
+            <a href="archives.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==3} ? 'active'"><i class="clock icon"></i>Time</a>
+            <a href="music.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==4} ? 'active'"><i class="music icon"></i>Music</a>
+            <a href="picture.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==5} ? 'active'"><i class="image icon"></i> Photo</a>
+            <a href="about.html" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==6} ? 'active'"><i class="info icon"></i>About me</a>
+        </div>
+        <div class="hiddenDiv"></div>
+    </div>
+
+</div>
+
+<!--最新推荐-->
+<div class="ui m-padded-tb-large">
+    <div class="ui m-container-small m-opacity">
+        <div class="ui secondary segment " align="center">
+            <i class="bookmark icon"></i>最新推荐
+        </div>
+    </div>
+    <div class="ui stackable m-container-mini m-opacity grid">
+        <div class="m-margin-tb-tiny four wide column">
+            <a href="#" class="class_outer" target="_blank">
+                <img src="css/images/banner1.jpg" alt="" class="ui rounded image">
+                <span class="class_cover" >
+                     <h4 class="m-font-size-blog-text m-margin-tb-tiny">Smile 个人博客</h4>
+                  </span>
+            </a>
+        </div>
+		<div class="m-margin-tb-tiny four wide column">
+            <a href="#" class="class_outer" target="_blank">
+                <img src="css/images/banner2.jpg" alt="" class="ui rounded image">
+                <span class="class_cover" >
+                     <h4 class="m-font-size-blog-text m-margin-tb-tiny">Smile 个人博客</h4>
+                  </span>
+            </a>
+        </div>
+		<div class="m-margin-tb-tiny four wide column">
+            <a href="#" class="class_outer" target="_blank">
+                <img src="css/images/banner3.jpg" alt="" class="ui rounded image">
+                <span class="class_cover" >
+                     <h4 class="m-font-size-blog-text m-margin-tb-tiny">Smile 个人博客</h4>
+                  </span>
+            </a>
+        </div>
+		<div class="m-margin-tb-tiny four wide column">
+            <a href="#" class="class_outer" target="_blank">
+                <img src="css/images/banner4.jpg" alt="" class="ui rounded image">
+                <span class="class_cover" >
+                     <h4 class="m-font-size-blog-text m-margin-tb-tiny">Smile 个人博客</h4>
+                  </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!--中间内容-->
+<div class="m-padded-tb-big animated fadeIn">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--博客内容-->
+            <div class="ui vertical segment">
+                <div class="ui m-container-small m-opacity">
+                    <div class="ui secondary segment " align="center">
+                        <i class="bookmark icon"></i>最新文章
+                    </div>
+                </div>
+                <!--博文列表-->
+                <div class="ui padded segment m-padded-tb-large m-opacity">
+                    <div class="ui large aligned mobile reversed stackable grid">
+                        <!--博文信息-->
+                        <div class="eleven wide column ">
+                            <h3 class="ui header" ><a href="#" target="_blank" class="m-black">ZQ个人博客</a></h3>
+                            <p class="m-text m-margin-top-max">对于零基础的人而言，要怎么学习Web前端呢？在网上看到有很多的前端学习路线图，但大部分的前端学习路线图是很零碎的，没有系统的前端学习目标和重点知识，也不知道学到什么程度可以找工作。前端入门小白在网上搜到前端学习路线图后，傻了，要学习这么多，也没有重点，算了放弃吧。小白也不知道目前哪些技能是市场需要的，哪些技能正在被市场所淘汰掉。在学习的过程中没有重点。企业对于前端人才最核心的需求并不是对单纯掌握某种应用型技术，而是希望前端开发者能够通过自己的经验帮助企业解决项目中随时出现的问题。</p>
+                            <div class="ui m-margin-top-max grid">
+                                <div class="eleven wide column">
+                                    <div class="ui mini horizontal link list">
+                                        <div class="item">
+                                            <img src="/css/images/me.png"  alt="" class="ui avatar image">
+                                            <div class="content"><a href="#" target="_blank" class="header" >小刘</a></div>
+                                        </div>
+                                        <div class="item">
+                                            <i class="calendar icon"></i><span>2020-06-23</span>
+                                        </div>
+                                        <div class="item">
+                                            <i class="eye icon"></i> <span>341</span>
+                                        </div>
+                                        <div class="item">
+                                            <i class="comment outline icon"></i> <span>113</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right aligned five wide column">
+                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">web前端</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--博文图片-->
+                        <div class="five wide column">
+                            <a href="#" target="_blank">
+                                <img src="i/css/images/backimg1.jpg" alt="" class="ui rounded image">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--分页-->
+            <div class="ui bottom attached segment m-opacity stackable grid">
+                <div class="three wide column" align="center">
+                    <a class="item">上一页</a>
+                </div>
+
+                <div class="ten wide column" align="center">
+                    <p> <span></span> / <span></span> </p>
+                </div>
+
+                <div class="three wide column" align="center">
+                    <a class="item">下一页</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!--置顶图标-->
+<div class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui icon button"><i class="chevron up icon"></i> </a>
+</div>
 
 
 
+<br>
+<br>
+<br>
+<!--底部栏-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <!--容器-->
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+                <div class="ui inverted link list">
+                    <div href="#" class="m-text-thin">Email：1017733614@qq.com</div>
+                    <div href="#" class="m-text-thin">QQ：1017733614</div>
+                </div>
+            </div>
 
-  </div>
+            <div class="four wide column" >
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >微信</div>
+                        <img src="img/oneStar.jpg" th:src="@{img/oneStar.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >QQ</div>
+                        <img src="img/QQ-question.jpg" th:src="@{img/QQ-question.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <!--博客运行时间统计-->
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">博客信息</div>
+                <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+                <div id="blog-message">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px">
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px;">
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 1 </h2> 篇
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 12 </h2> 次
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 14 </h2> 条
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 42 </h2> 条
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的博客已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
+        <a rel="nofollow" href="http://www.bootstrapmb.com" target="_blank">粤ICP备2002151号-1</a>
+    </div>
+    </div>
+
+</footer>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script src="js/jquery.waypoints.min.js" th:src="@{js/jquery.waypoints.min.js}"></script>
+
+<script>
+
+    // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+
+    // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2020, 08, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+
+    });
+
+    // 显示公众号
+    $('.tencent').popup({
+        popup : $('.tencent-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示微信
+    $('.wechat').popup({
+        popup : $('.wechat-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示QQ
+    $('.qq').popup({
+        popup : $('.qq-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示邮箱
+    $('.email').popup();
+
+    // 显示CSDN
+    $('.csdn').popup();
+
+    // 显示github
+    $('.github').popup();
+
+    // 导航栏显示
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $('#nav').show(500);
+            } else {
+                $('#nav').hide(500);
+            }
+            console.log('Scrolled to waypoint!  ' + direction);
+        }
+    })
+</script>
 </body>
 </html>
